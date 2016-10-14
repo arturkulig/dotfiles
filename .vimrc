@@ -30,12 +30,22 @@ nnoremap \ :CtrlP<cr>
 nnoremap <c-\> :NERDTreeToggle<cr>
 
 " moving lines with Alt + J/K
-nnoremap ∆ :m .+1<CR>==
-nnoremap Ż :m .-2<CR>==
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap Ż <Esc>:m .-2<CR>==gi
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap Ż :m '<-2<CR>gv=gv
+let os = substitute(system('uname'), "\n", "", "")
+if os == "Darwin"
+	nnoremap ∆ :m .+1<CR>==
+	nnoremap Ż :m .-2<CR>==
+	inoremap ∆ <Esc>:m .+1<CR>==gi
+	inoremap Ż <Esc>:m .-2<CR>==gi
+	vnoremap ∆ :m '>+1<CR>gv=gv
+	vnoremap Ż :m '<-2<CR>gv=gv
+else
+	nnoremap <a-j> :m .+1<CR>==
+	nnoremap <a-k> :m .-2<CR>==
+	inoremap <a-j> <Esc>:m .+1<CR>==gi
+	inoremap <a-k> <Esc>:m .-2<CR>==gi
+	vnoremap <a-j> :m '>+1<CR>gv=gv
+	vnoremap <a-k> :m '<-2<CR>gv=gv
+endif
 
 set relativenumber 
 set nu
