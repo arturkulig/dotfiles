@@ -39,12 +39,15 @@ if os == "Darwin"
 	vnoremap ∆ :m '>+1<CR>gv=gv
 	vnoremap Ż :m '<-2<CR>gv=gv
 else
-	nnoremap <a-j> :m .+1<CR>==
-	nnoremap <a-k> :m .-2<CR>==
-	inoremap <a-j> <Esc>:m .+1<CR>==gi
-	inoremap <a-k> <Esc>:m .-2<CR>==gi
-	vnoremap <a-j> :m '>+1<CR>gv=gv
-	vnoremap <a-k> :m '<-2<CR>gv=gv
+	" because of ubuntu terminal
+	execute "set <M-j>=\ej"
+	execute "set <M-k>=\ek"
+	nnoremap <M-j> :m .+1<CR>==
+	nnoremap <M-k> :m .-2<CR>==
+	inoremap <M-j> <Esc>:m .+1<CR>==gi
+	inoremap <M-k> <Esc>:m .-2<CR>==gi
+	vnoremap <M-j> :m '>+1<CR>gv=gv
+	vnoremap <M-k> :m '<-2<CR>gv=gv
 endif
 
 set relativenumber 
