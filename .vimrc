@@ -16,8 +16,9 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
-filetype plugin indent on
 
+filetype plugin indent on
+set autoindent
 syntax enable
 set background=dark
 set noswapfile
@@ -28,7 +29,9 @@ set lazyredraw
 iabbr cosnt const
 iabbr improt import
 
+" ctrp settings
 nnoremap \ :CtrlP<cr>
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist*/*
 
 " moving lines with Alt + J/K
 let os = substitute(system('uname'), "\n", "", "")
@@ -39,7 +42,6 @@ inoremap <c-k> <Esc>:m .-2<CR>==gi
 vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
 
-set relativenumber 
 set nu
 
 autocmd StdinReadPre * let s:std_in=1
