@@ -13,9 +13,6 @@ Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'elzr/vim-json'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()
