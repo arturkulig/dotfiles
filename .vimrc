@@ -8,8 +8,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/es.next.syntax.vim'
+"Plugin 'othree/yajs.vim'
+"Plugin 'othree/es.next.syntax.vim'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'elzr/vim-json'
 Plugin 'hail2u/vim-css3-syntax'
@@ -31,7 +32,7 @@ iabbr improt import
 
 " ctrp settings
 nnoremap \ :CtrlP<cr>
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/dist*/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/dist*/*
 
 " moving lines with Alt + J/K
 let os = substitute(system('uname'), "\n", "", "")
