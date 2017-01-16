@@ -46,4 +46,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[44m\]\u\[\e[m\]\[\e[34;43m\]►\[\e[m\]\[\e[30;43m\]\w\[\e[m\]\[\e[33;47m\]►\[\e[m\]\[\e[30;47m\]\`parse_git_branch\`\[\e[m\] "
+export PS1="\[\e[44m\]\u \[\e[m\]\[\e[34;43m\]\[\e[m\]\[\e[30;43m\] \w \[\e[m\]\[\e[33;47m\]\[\e[m\]\[\e[30;47m\] \`parse_git_branch\` \[\e[m\]\[\e[37m\]\[\e[m\] "
+
+export NVM_DIR="/home/artur/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
