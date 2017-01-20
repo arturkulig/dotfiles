@@ -48,9 +48,6 @@ function parse_git_dirty {
 
 export PS1="\[\e[0;37;44m\] \u \[\e[m\]\[\e[34;40m\]\[\e[m\]\[\e[0;37;40m\] \w \[\e[m\]\[\e[30;47m\]\[\e[m\]\[\e[30;47m\] \`parse_git_branch\` \[\e[m\]\[\e[37m\]\[\e[m\] "
 
-export NVM_DIR="/home/artur/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
